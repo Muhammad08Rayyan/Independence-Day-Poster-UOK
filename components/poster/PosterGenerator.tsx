@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Toaster } from 'react-hot-toast';
+import Image from 'next/image';
 import PosterBuilder from './PosterBuilder';
 import ErrorBoundary from '../ErrorBoundary';
 
@@ -35,7 +36,14 @@ const PosterGenerator: React.FC = () => {
             transition={{ delay: 0.2 }}
             className="inline-flex items-center gap-2 sm:gap-3 bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl px-4 sm:px-6 py-2 sm:py-3 shadow-lg border border-green-100"
           >
-            <div className="text-2xl sm:text-3xl">🇵🇰</div>
+            <Image
+              src="/emoji/flag-pk.svg"
+              alt="Pakistan flag emoji"
+              width={40}
+              height={28}
+              priority
+              className="h-6 w-auto sm:h-7 rounded-[2px]"
+            />
             <div className="text-left">
               <h1 className="text-lg sm:text-2xl font-bold text-gray-800">
                 Pakistan Independence Day
